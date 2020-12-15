@@ -1,0 +1,88 @@
+:root {
+    --light-grey: rgba(211,211,211, 1);
+    --light-grey--lighter: rgba(211,211,211, 0.2);
+    --white: rgba(255,255,255, 1);
+    --dark: rgba(0, 0, 0, 1);
+    --dark-lighter: rgba(0, 0, 0, 0.3);
+    --button-grey: rgba(220, 220, 220, 1);
+}
+
+.container {
+    transform: translateY(25vh);
+}
+
+
+.button__container {
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    background: var(--button-grey);
+    position: relative;
+}
+
+.floatingButton {
+    color: rgba(0,0,0, 0.7);
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+}
+
+.video__container {
+    position: relative;
+}
+
+.verticalLine {
+    position: absolute;
+    border-left: 3em solid var(--light-grey--lighter);
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 2;
+}
+
+.verticalLine:hover {
+    background: var(--dark-lighter)
+}
+
+.caret {
+    position: absolute;
+    color: var(--light-grey);
+    top: 35%;
+    right: 1.2em;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.caret:hover {
+    color: var(--dark);
+}
+
+@keyframes slideOut {
+    0% {
+      opacity: 0;
+      transform: translate(100%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(100%, 0);
+    }
+  }
+  
+  .slideVideoOut {
+    animation: slideOut 800ms ease-out;
+  }
+  
+  .slideVideoIn {
+    animation: slideIn 800ms ease-out;
+  }
